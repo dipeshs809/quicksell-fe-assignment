@@ -1,0 +1,21 @@
+.popoverContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.popoverTrigger {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.popoverContent {
+  display: none;
+  border: 1px solid black;
+}
+
+.visible {
+  display: block;
+}

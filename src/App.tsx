@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import Popover from "components/dropdown";
+import "./App.css";
+
+import React from "react";
+// import { SelectBox } from "components/selectBox";
+// import { optionProps } from "components/selectBox/index.interface";
+import Dashboard from "features/Dashboard";
+
+// const options: optionProps[] = [
+//   {
+//     label: "Sass",
+//     value: "Shashwat"
+//   },
+//   {
+//     label: "Dipsy",
+//     value: "Dipesh"
+//   },
+//   {
+//     label: "Gandu",
+//     value: "Ashutosh"
+//   },
+// ]
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Dashboard/>
     </div>
   );
 }
