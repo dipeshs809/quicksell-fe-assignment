@@ -6,7 +6,7 @@ export interface ITicket {
   tag: string[];
   userId: string;
   status: string;
-  priority: 4;
+  priority: number;
 }
 
 export interface IUser {

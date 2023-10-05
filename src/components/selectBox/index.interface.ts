@@ -6,6 +6,7 @@ export interface optionProps {
 }
 
 export interface selectBoxProps {
+    label: string,
     options: optionProps[]
     initialValue?: string
     onChange: (value: string) => void

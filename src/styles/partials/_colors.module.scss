@@ -1,0 +1,178 @@
+// 400 is the primary shade for a color
+// The lower the number the lighter the shade
+$white: #fff;
+
+// primary color is violet
+
+$primary-color: (
+  primary-100: #e8e8ff,
+  primary-200: #c0c0ff,
+  primary-300: #7070ff,
+  primary-400: #6161ff,
+  primary-500: #5656ed,
+  primary-550: #6665ff,
+  primary-600: #4040ba,
+);
+
+@each $color, $value in $primary-color {
+  :export {
+    #{unquote($color)}: $value;
+  }
+}
+
+$grey-color: (
+  grey-100: #f7f7f9,
+  grey-200: #f3f3f3,
+  grey-300: #e0e0e0,
+  grey-400: #ededed,
+  grey-500: #9fa6b0,
+  grey-550: #6b7785,
+  grey-600: #757575,
+  grey-700: #424242,
+  grey-800: #42424299,
+  grey-900: #101721,
+);
+
+@each $color, $value in $grey-color {
+  :export {
+    #{unquote($color)}: $value;
+  }
+}
+
+$emerald-color: (
+  emerald-100: #dbf3e7,
+  emerald-200: #9ddcbe,
+  emerald-300: #40bd80,
+  emerald-400: #10ac60,
+  emerald-500: #0e9a56,
+  emerald-600: #088649,
+  emerald-700: #4bb952,
+);
+
+@each $color, $value in $emerald-color {
+  :export {
+    #{unquote($color)}: $value;
+  }
+}
+
+$red-color: (
+  red-50: #f9e0d9,
+  red-200: #efbbad,
+  red-300: #d94c26,
+  red-400: #d32f02,
+  red-500: #bd2900,
+  red-600: #b71c1c,
+  red-700: #a91d00,
+);
+
+@each $color, $value in $red-color {
+  :export {
+    #{unquote($color)}: $value;
+  }
+}
+
+$green-color: (
+  green-50: #16cd3e19,
+  green-100: #19be6c26,
+  green-200: #19be6c,
+  green-300: #16cd3e,
+  green-400: #27ae60,
+);
+
+@each $color, $value in $green-color {
+  :export {
+    #{unquote($color)}: $value;
+  }
+}
+
+$yellow-color: (
+  yellow-100: #fdf2da,
+  yellow-200: #f3aa07,
+);
+
+@each $color, $value in $yellow-color {
+  :export {
+    #{unquote($color)}: $value;
+  }
+}
+$light-color: (
+  light-50: #f5f7f9,
+  light-100: #fafaff,
+  light-200: #dde6f3,
+  light-300: #dde5f0,
+  light-400: #eff1f5,
+);
+
+@each $color, $value in $light-color {
+  :export {
+    #{unquote($color)}: $value;
+  }
+}
+
+// extended color palette
+$purple-color: (
+  purple-100: #efe6fb,
+  purple-400: #9254e3,
+);
+@each $color, $value in $purple-color {
+  :export {
+    #{unquote($color)}: $value;
+  }
+}
+
+$pink-color: (
+  pink-100: #fbdee8,
+  pink-400: #dc4276,
+);
+@each $color, $value in $pink-color {
+  :export {
+    #{unquote($color)}: $value;
+  }
+}
+
+$teal-color: (
+  teal-100: #e4f6f6,
+  teal-400: #47c1bf,
+);
+@each $color, $value in $teal-color {
+  :export {
+    #{unquote($color)}: $value;
+  }
+}
+
+$coral-color: (
+  coral-100: #fdebe4,
+  coral-400: #ed754b,
+);
+@each $color, $value in $coral-color {
+  :export {
+    #{unquote($color)}: $value;
+  }
+}
+
+$jade-color: (
+  jade-100: #e3f4e5,
+  jade-400: #4bb952,
+);
+@each $color, $value in $jade-color {
+  :export {
+    #{unquote($color)}: $value;
+  }
+}
+
+$black: #212121;
+$black-800: #424242;
+
+$transparent: transparent;
+
+$yellow: #f3aa07;
+$yellow-light: #fdf2da;
+
+:export {
+  white: $white;
+  black: $black;
+  black-800: $black-800;
+  transparent: $transparent;
+  yellow: $yellow;
+  yellow-light: $yellow-light;
+}

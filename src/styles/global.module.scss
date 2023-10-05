@@ -1,0 +1,36 @@
+@use "partials" as *;
+
+:global {
+  //re-usable classes
+  .display-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .display-flex-column-center {
+    @extend .display-flex-center;
+    flex-direction: column;
+  }
+  .display-flex-space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .d-flex {
+    display: flex !important;
+  }
+  .flex-row-reverse {
+    flex-direction: row-reverse !important;
+  }
+  .align-center {
+    align-items: center !important;
+  }
+
+  //divider
+  .divider {
+    width: 100%;
+    margin: map-get($map: $scale, $key: 16) 0;
+    height: $border-width;
+    background-color: map-get($map: $light-color, $key: light-200);
+  }
+}

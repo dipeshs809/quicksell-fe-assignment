@@ -1,0 +1,69 @@
+@use "colors.module" as *;
+@use "fonts.module" as *;
+@use "scales.module" as *;
+
+:global {
+  //typography
+  .dynamic-numbers {
+    font-weight: map-get($map: $font-weights, $key: 500);
+    font-size: map-get($map: $font-sizes, $key: 5);
+    line-height: calc(map-get($map: $font-sizes, $key: 6) + 2px);
+    color: map-get($map: $grey-color, $key: grey-900);
+  }
+  .hero-text {
+    font-weight: map-get($map: $font-weights, $key: 600);
+    font-size: map-get($map: $font-sizes, $key: 4);
+    line-height: map-get($map: $font-sizes, $key: 6);
+    color: map-get($map: $grey-color, $key: grey-900);
+  }
+  .sub-hero-text {
+    font-weight: map-get($map: $font-weights, $key: 500);
+    font-size: map-get($map: $font-sizes, $key: 3);
+    line-height: map-get($map: $font-sizes, $key: 5);
+    color: map-get($map: $grey-color, $key: grey-900);
+  }
+  .text {
+    font-weight: map-get($map: $font-weights, $key: 500);
+    font-size: map-get($map: $font-sizes, $key: 2);
+    line-height: map-get($map: $font-sizes, $key: 4);
+    color: map-get($map: $grey-color, $key: grey-900);
+  }
+
+  // convention >> classname-weight-color
+  .hero-text-medium {
+    @extend .hero-text;
+    font-weight: map-get($map: $font-weights, $key: 500);
+  }
+  .hero-text-regular {
+    @extend .hero-text;
+    font-weight: map-get($map: $font-weights, $key: 400);
+  }
+  .hero-text-regular-light {
+    @extend .hero-text-regular;
+    color: map-get($map: $grey-color, $key: grey-550);
+  }
+  .sub-hero-text-regular {
+    @extend .sub-hero-text;
+    font-weight: map-get($map: $font-weights, $key: 400);
+  }
+  .sub-hero-text-regular-medium {
+    @extend .sub-hero-text-regular;
+    color: map-get($map: $grey-color, $key: grey-550);
+  }
+  .sub-hero-text-regular-low {
+    @extend .sub-hero-text-regular;
+    color: map-get($map: $grey-color, $key: grey-500);
+  }
+  .text-regular {
+    @extend .text;
+    font-weight: map-get($map: $font-weights, $key: 400);
+  }
+  .text-regular-medium {
+    @extend .text-regular;
+    color: map-get($map: $grey-color, $key: grey-550);
+  }
+  .text-regular-low {
+    @extend .text-regular;
+    color: map-get($map: $grey-color, $key: grey-500);
+  }
+}

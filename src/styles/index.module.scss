@@ -1,0 +1,45 @@
+@use "partials/colors.module" as *;
+@use "partials/scales.module" as *;
+@use "antd-css-utilities/utility.min";
+@use "global.module.scss";
+@use "fonts.module.scss";
+
+:global {
+  * {
+    font-family: "Graphik", Arial, Helvetica, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  ::-webkit-scrollbar {
+    width: map-get($map: $scale, $key: 4);
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: map-get($map: $grey-color, $key: grey-300);
+    border-radius: 1px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: map-get($map: $grey-color, $key: grey-900);
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: map-get($map: $grey-color, $key: grey-900);
+  }
+}

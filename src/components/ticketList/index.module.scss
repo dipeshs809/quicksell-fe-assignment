@@ -1,0 +1,13 @@
+@use "../../styles/partials/" as *;
+
+.ticketListContainer {
+    display: flex;
+    flex-direction: column;
+    gap: map-get($map: $scale, $key: 8);
+    padding: 8px;
+    .ticketListHeader {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: map-get($map: $scale, $key: 8);
+    }
+}

@@ -1,6 +1,28 @@
 import TicketList from "components/ticketList";
 import React from "react";
-import { useGetTicketDataQuery } from "app/services/quickSellApi";
+import { IResponse, useGetTicketDataQuery } from "app/services/quickSellApi";
+import { useSearchParams } from "react-router-dom";
+import { Filter, GroupedTickets } from "./index.interface";
+import { groupTickets, orderTickets } from "./helper";
+
+const TicketListContainer: React.FC<IResponse> = ({ tickets, users }) => {
+  const [searchParams] = useSearchParams();
+  const { group, order }: Filter = JSON.parse(
+    searchParams.get("filters") || "{}"
+  );
+
+  let groupedTickets: GroupedTickets[] = groupTickets(tickets, group, users);
+
+  groupedTickets = orderTickets(groupedTickets, order);
+  return (
+    <div>
+      {groupedTickets.map((groupedTicket, index) => {
+        return <TicketList key={index} {...groupedTicket} />;
+      })}
+      {/* <TicketList tickets={tickets} /> */}
+    </div>
+  );
+};
 
 const DashBoardContainer = () => {
   const { data, isFetching } = useGetTicketDataQuery();
@@ -8,9 +30,10 @@ const DashBoardContainer = () => {
   return isFetching ? (
     <div>Loading</div>
   ) : (
-    <div>
-      <TicketList tickets={data?.tickets || []} users={data?.users || []} />
-    </div>
+    <TicketListContainer
+      tickets={data?.tickets || []}
+      users={data?.users || []}
+    />
   );
 };
 

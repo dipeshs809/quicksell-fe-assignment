@@ -1,0 +1,8 @@
+@use "../../styles/partials/" as *;
+
+.selectBox {
+    label {
+        @extend .sub-hero-text-regular-medium;
+        color: map-get($map: $grey-color, $key: grey-500);
+    }
+}
