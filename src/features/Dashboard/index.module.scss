@@ -1,0 +1,11 @@
+@use "../../styles/partials/" as *;
+
+.ticketListContainer {
+    display: flex;
+    gap: map-get($map: $scale, $key: 16);
+    overflow-x: scroll;
+    background-color: map-get($map: $light-color, $key: light-400);
+}
+.ticketListContainer::-webkit-scrollbar {
+  display: none;
+}

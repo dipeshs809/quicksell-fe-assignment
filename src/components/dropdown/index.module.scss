@@ -1,21 +1,36 @@
+@use "../../styles/partials/" as *;
+
 .popoverContainer {
   position: relative;
   display: inline-block;
 }
 
 .popoverTrigger {
-  background-color: #007bff;
-  color: #fff;
+  @extend .hero-text;
+  display: flex;
+  gap: map-get($map: $scale, $key: 8);
+  justify-content: center;
+  align-items: center;
   border: none;
   padding: 8px 16px;
   cursor: pointer;
+  border-radius: map-get($map: $scale, $key: 8);
+  border: 1px solid map-get($map: $grey-color, $key: grey-500);
 }
 
 .popoverContent {
   display: none;
-  border: 1px solid black;
+  border: 1px solid map-get($map: $grey-color, $key: grey-500);
+  border-radius: map-get($map: $scale, $key: 8);
+  background-color: white;
+  padding: map-get($map: $scale, $key: 16);
+  width: max-content;
+  margin-top: map-get($map: $scale, $key: 8);
 }
 
 .visible {
-  display: block;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  gap: map-get($map: $scale, $key: 12);
 }

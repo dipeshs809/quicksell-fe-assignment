@@ -47,14 +47,14 @@ function groupByStatus(tickets: ITicket[]) {
       tickets: backLog,
     },
     {
-      header: status.inProgress,
-      groupBy: groupBy.status,
-      tickets: inProgress,
-    },
-    {
       header: status.todo,
       groupBy: groupBy.status,
       tickets: todo,
+    },
+    {
+      header: status.inProgress,
+      groupBy: groupBy.status,
+      tickets: inProgress,
     },
     {
       header: status.done,

@@ -1,12 +1,10 @@
 import { Action, configureStore, ThunkAction } from "@reduxjs/toolkit";
-import counterSlice from "app/slice/exampleSlice";
 
 import { api, handleErrorWithToast } from "./services/api";
 
 export const store = configureStore({
   reducer: {
     [api.reducerPath]: api.reducer,
-    counter: counterSlice,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(api.middleware, handleErrorWithToast),

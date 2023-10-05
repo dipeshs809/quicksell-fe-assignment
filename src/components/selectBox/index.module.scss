@@ -1,8 +1,15 @@
 @use "../../styles/partials/" as *;
 
 .selectBox {
-    label {
-        @extend .sub-hero-text-regular-medium;
-        color: map-get($map: $grey-color, $key: grey-500);
-    }
+  display: flex;
+  gap: map-get($map: $scale, $key: 32);
+  label {
+    @extend .sub-hero-text-regular-medium;
+    color: map-get($map: $grey-color, $key: grey-500);
+  }
+  select {
+    border-radius: map-get($map: $scale, $key: 4);
+    border: 1px solid map-get($map: $grey-color, $key: grey-500);
+    padding: map-get($map: $scale, $key: 4);
+  }
 }

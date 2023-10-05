@@ -1,0 +1,13 @@
+@use "../../styles/partials/" as *;
+
+.navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: map-get($map: $scale, $key: 8) map-get($map: $scale, $key: 32);
+    height: 3rem;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
